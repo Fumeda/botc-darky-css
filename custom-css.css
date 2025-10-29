@@ -1,0 +1,412 @@
+:root {
+  --enabled-filters: invert(1) brightness(0.8) contrast(0.9);
+}
+
+/* 
+Background images that I recommend
+#center{
+  !=----- animated sea waves
+  background-image: url("https://cdn.pixabay.com/video/2021/04/15/71122-537102350_large.mp4";
+  !=----- blackhole
+  background-image: url("https://cdna.artstation.com/p/assets/images/images/030/895/502/large/alessandro-ortica-blackhole-02-256.jpg?1601987714");
+  background-image: url("");
+  background-image: url("");
+  background-image: url("");
+} 
+*/
+
+/*~~~~~~Night cards*/
+/*default*/
+ul.signals li:not(.warning):hover svg[data-v-5a727b11] path {
+  fill: rgba(0, 0, 50, 1) !important;
+  stroke: rgba(0, 150, 255, 1) !important;
+}
+
+ul.signals li[data-v-5a727b11]:not(.warning):hover {
+  color: rgba(0, 150, 255, 1) !important;
+}
+
+/*Got it*/
+ul.signals li:not(.warning):has(.fa-thumbs-up):hover svg[data-v-5a727b11] path {
+  fill: rgba(40, 40, 150, 1) !important;
+}
+
+/*Character*/
+ul.log li.message .card-role .icon {
+  filter: drop-shadow() !important;
+}
+
+ul.log li.message .card-role {
+  border: 2px solid black !important;
+}
+
+/*Disable colorblind setting (doesn't work with this styling)*/
+#general-colorblind {
+  text-decoration: line-through;
+  filter: blur(1px);
+}
+
+/*Change token colors for styling*/
+/*Demon*/
+
+.team-demon .icon,
+.team-demon .ability b,
+.character ul li .team-demon .icon,
+/*Word path below token
+.character ul li .team-demon .name, */
+.character .demon ul .team-demon .icon,
+.characters .demon ul li.demon .icon,
+.characters .demon ul li.demon .name,
+.characters .demon aside,
+.night-reference ul li.demon .icon,
+/* .night-reference ul li.demon .name, */
+.night-order.tab .team-demon .icon,
+.night-order.tab .team-demon .name,
+.night-order.tab .team-demon .reminder,
+.character.tab li>.team-demon .icon,
+.character.tab .role>.team-demon .icon,
+.character.tab .team-demon .name,
+.character.tab .team-demon .ability,
+ul.log li.message .card-role:has(.demon),
+.signals .roles li .team-demon,
+.signals .card-demon,
+/* .signals .card-role .demon, */
+.signals ul.roles .demon,
+.signals .players.circle li .team-demon,
+.town-info .box td.demon,
+#whispers .messages div b.team .team-demon,
+.reminder.team-demon>.icon {
+  filter: var(--enabled-filters) hue-rotate(220deg) saturate(1.6) !important;
+}
+
+
+/*minion*/
+.team-minion .icon,
+.team-minion .ability b,
+.character ul li .team-minion .icon,
+/*Word path below token
+.character ul li .team-minion .name, */
+.character .minion ul .team-minion .icon,
+.characters .minion ul li.minion .icon,
+.characters .minion ul li.minion .name,
+.characters .minion aside,
+.night-reference ul li.minion .icon,
+/* .night-reference ul li.minion .name, */
+.night-order.tab .team-minion .icon,
+.night-order.tab .team-minion .name,
+.night-order.tab .team-minion .reminder,
+.character.tab li>.team-minion .icon,
+.character.tab .role>.team-minion .icon,
+.character.tab .team-minion .name,
+.character.tab .team-minion .ability,
+ul.log li.message .card-role:has(.minion),
+.signals .roles li .team-minion,
+.signals .card-minion,
+.signals .card-role .minion,
+.signals ul.roles .minion,
+.signals .players.circle li .team-minion,
+.town-info .box td.minion,
+#whispers .messages div b.team .team-minion,
+.reminder.team-minion>.icon {
+  filter: var(--enabled-filters) hue-rotate(180deg) saturate(1.6) !important;
+}
+
+
+/*townsfolk*/
+.team-townsfolk .icon,
+.team-townsfolk .ability b,
+.character ul li .team-townsfolk .icon,
+/*Word path below token
+.character ul li .team-townsfolk .name, */
+.character .townsfolk ul .team-townsfolk .icon,
+.characters .townsfolk ul li.townsfolk .icon,
+.characters .townsfolk ul li.townsfolk .name,
+.characters .townsfolk aside,
+.night-reference ul li.townsfolk .icon,
+/* .night-reference ul li.townsfolk .name, */
+.night-order.tab .team-townsfolk .icon,
+.night-order.tab .team-townsfolk .name,
+.night-order.tab .team-townsfolk .reminder,
+.character.tab li>.team-townsfolk .icon,
+.character.tab .role>.team-townsfolk .icon,
+.character.tab .team-townsfolk .name,
+.character.tab .team-townsfolk .ability,
+ul.log li.message .card-role:has(.townsfolk),
+.signals .roles li .team-townsfolk,
+.signals .card-townsfolk,
+.signals .card-role .townsfolk,
+.signals ul.roles .townsfolk,
+.signals .players.circle li .team-townsfolk,
+.town-info .box td.townsfolk,
+#whispers .messages div b.team .team-townsfolk,
+.reminder.team-townsfolk>.icon {
+  filter: var(--enabled-filters) hue-rotate(180deg) !important;
+}
+
+
+/*outsider*/
+.team-outsider .icon,
+.team-outsider .ability b,
+.character ul li .team-outsider .icon,
+/*Word path below token
+.character ul li .team-outsider .name, */
+.character .outsider ul .team-outsider .icon,
+.characters .outsider ul li.outsider .icon,
+.characters .outsider ul li.outsider .name,
+.characters .outsider aside,
+.night-reference ul li.outsider .icon,
+/* .night-reference ul li.outsider .name, */
+.night-order.tab .team-outsider .icon,
+.night-order.tab .team-outsider .name,
+.night-order.tab .team-outsider .reminder,
+.character.tab li>.team-outsider .icon,
+.character.tab .role>.team-outsider .icon,
+.character.tab .team-outsider .name,
+.character.tab .team-outsider .ability,
+ul.log li.message .card-role:has(.outsider),
+.signals .roles li .team-outsider,
+.signals .card-outsider,
+.signals .card-role .outsider,
+.signals ul.roles .outsider,
+.signals .players.circle li .team-outsider,
+.town-info .box td.outsider,
+#whispers .messages div b.team .team-outsider,
+.reminder.team-outsider>.icon {
+  filter: var(--enabled-filters) hue-rotate(220deg) !important;
+}
+
+/*traveller*/
+
+.team-traveller .icon,
+.team-traveller .ability b,
+.character ul li .team-traveller .icon,
+/*Word path below token
+.character ul li .team-traveller .name, */
+.character .traveller ul .team-traveller .icon,
+.characters .traveller ul li.traveller .icon,
+.characters .traveller ul li.traveller .name,
+.characters .traveller aside,
+.night-reference ul li.traveller .icon,
+/* .night-reference ul li.traveller .name, */
+.night-order.tab .team-traveller .icon,
+.night-order.tab .team-traveller .name,
+.character.tab li>.team-traveller .icon,
+.character.tab .role>.team-traveller .icon,
+.character.tab .team-traveller .name,
+.character.tab .team-traveller .ability,
+.signals .roles li .team-traveller,
+.signals .card-traveller,
+.signals .card-role .traveller,
+.signals ul.roles .traveller,
+.signals .players.circle li .team-traveller,
+.town-info .box td.traveller,
+#whispers .messages div b.team .team-traveller,
+.reminder.team-traveller>.icon {
+  filter: var(--enabled-filters) hue-rotate(170deg) !important;
+}
+
+.team-fabled .icon,
+.team-fabled .ability b,
+.character ul li .team-fabled .icon,
+/*Word path below token
+.character ul li .team-fabled .name, */
+.character .fabled ul .team-fabled .icon,
+.characters .fabled ul li.fabled .icon,
+.characters .fabled ul li.fabled .name,
+.characters .fabled aside,
+.night-reference ul li.fabled .icon,
+/* .night-reference ul li.fabled .name, */
+.night-order.tab .team-fabled .icon,
+.night-order.tab .team-fabled .name,
+.character.tab li>.team-fabled .icon,
+.character.tab .role>.team-fabled .icon,
+.character.tab .team-fabled .name,
+.character.tab .team-fabled .ability,
+.signals .roles li .team-fabled,
+.signals .card-fabled,
+.signals .card-role .fabled,
+.signals ul.roles .fabled,
+.signals .players.circle li .team-fabled,
+.town-info .box td.fabled,
+#whispers .messages div b.team .team-fabled,
+.reminder.team-fabled>.icon {
+  filter: var(--enabled-filters) hue-rotate(50deg) !important;
+}
+
+.good {
+  color: darkcyan !important;
+}
+
+.evil {
+  color: pink !important;
+}
+
+.night-reference ul li .name {
+  filter: none !important;
+}
+
+/*Change script background*/
+.character.tab .container,
+.night-order.tab .container {
+  background-image: linear-gradient(180deg, rgb(12, 18, 36), rgb(29, 18, 30)) !important;
+  border:8px solid black;
+}
+
+/*Change the script buttons*/
+.character.tab .label,
+.night-order.tab .label {
+  background-image: linear-gradient(rgb(12, 18, 36), rgb(29, 18, 30), rgb(12, 18, 36)) !important;
+  color: #d0ae88;
+}
+
+/*Text chat style*/
+#whispers {
+  background-image: repeating-linear-gradient(196deg,
+      rgba(40, 40, 50, 0.5),
+      rgba(40, 40, 50, 0.5),
+      rgba(10, 10, 30, 0.6),
+      rgba(10, 10, 30, 0.6),
+      rgba(50, 50, 50, 0.2),
+      rgba(10, 10, 10, 0.5),
+      rgba(10, 10, 10, 0.5),
+      rgba(10, 10, 10, 0.5),
+      rgba(10, 10, 20, 0.5)) !important;
+  /* multiply 100% by color amount in gradient */
+  background-size: 600% 600% !important;
+  border: 2px solid black !important;
+  animation: background_flow 40s ease-in-out infinite !important;
+}
+
+/*Text chat notifications*/
+#whispers .tabs li em {
+  animation: alert 1s ease-in-out infinite;
+  color: transparent !important;
+  text-shadow: none !important;
+}
+
+/*Necessary for other voting stylings*/
+#vote {
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+/*Position the voting overlay towards the top right*/
+#vote .overlay {
+  position: absolute;
+  top: 5%;
+  right: 22vw;
+  outline: 1px dashed white;
+  border: 3px solid gainsboro;
+}
+
+/*Change the look of the clock hands*/
+.clock .arrows {
+  opacity: 0.7;
+  filter: drop-shadow(0px 0px 2px white) !important;
+}
+
+.clock .arrows .nominator {}
+
+.clock .arrows .nominee-static:before {}
+
+.clock .arrows .nominee-moving:before {
+  background-image: url(https://i.imgur.com/kHiHHpQ.png) !important;
+}
+
+/*Change the look of tokens on the grimoire*/
+.token {
+  background-image: radial-gradient(rgba(1, 1, 1, 1) 0%, rgba(30, 30, 40, 1) 70%, rgba(0, 0, 10, 1) 80%, rgba(30, 15, 45, 1) 95%) !important;
+  background-size: 300% 300%;
+  border: 4px solid rgba(255, 255, 255, 0.6) !important;
+  border-radius: 100%;
+}
+
+/*Default token glow*/
+.you .token {
+  animation: glow 5s ease-in-out infinite !important;
+}
+
+/*Change ability text look*/
+.token .ability {
+  background-image: radial-gradient(rgba(1, 1, 1, 1) 0%, rgba(0, 0, 10, 1) 25%, rgba(30, 15, 45, 1) 95%) !important;
+  color: white !important;
+  border: 1px solid white !important;
+}
+
+.token .icon::after {
+  filter: drop-shadow(0 0 12px white) !important;
+}
+
+/*Token character name text*/
+.token .name .label {
+  filter: drop-shadow(0 1.5px 0 rgba(0, 0, 0, 0.5)) drop-shadow(0 -1.5px 0 rgba(0, 0, 0, 0.5)) drop-shadow(1.5px 0 0 rgba(0, 0, 0, 0.5)) drop-shadow(-1.5px 0 0 rgba(0, 0, 0, 0.5)) !important;
+  fill: white !important;
+}
+
+/*Change reminders look*/
+.reminders .reminder .overlay {
+  z-index: 200 !important;
+  position: relative;
+}
+
+/*Script title*/
+.title {
+  color: white !important;
+}
+
+/*Dusk/Dawn styling*/
+.team-undefined {
+  color: white;
+}
+
+/*Night order waking reminder tokens*/
+.token.visible {}
+
+/*Script jinxes*/
+.jinx {
+  filter: var(--enabled-filters) grayscale(1.0) !important;
+}
+
+@keyframes alert {
+  0% {
+    background-color: rgba(255, 180, 0, 1);
+  }
+
+  50% {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  100% {
+    background-color: rgba(255, 180, 0, 1);
+  }
+}
+
+@keyframes background_flow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 25%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+  }
+
+  50% {
+    border-color: #000;
+  }
+
+  100% {
+    box-shadow: 0 0 20px 16px transparent;
+    border-color: rgba(0, 0, 255, 1);
+  }
+}
