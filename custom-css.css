@@ -1,5 +1,20 @@
 :root {
   --enabled-filters: invert(1) brightness(0.8) contrast(0.9);
+  --demon-hue: 220deg;
+  --minion-hue: 180deg;
+  --townsfolk-hue: 180deg;
+  --outsider-hue: 220deg;
+  --traveller-hue: 170deg;
+  --fabled-hue: 50deg;
+  --loric-hue: -50deg;
+}
+
+/*need to use property to make angle variable animatable*/
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
 
 /* 
@@ -32,8 +47,8 @@ ul.signals li:not(.warning):has(.fa-thumbs-up):hover svg[data-v-5a727b11] path {
 }
 
 /*Character*/
-ul.log li.message .card-role .icon {
-  filter: drop-shadow() !important;
+.signals .card-role .icon {
+  filter: drop-shadow(0 0 2px black) !important;
 }
 
 ul.log li.message .card-role {
@@ -47,8 +62,15 @@ ul.log li.message .card-role {
 }
 
 /*Change token colors for styling*/
+
 /*Demon*/
 
+/*Tokens*/
+ul.tokens>li.demon {
+  box-shadow: 0 0 10px hsl(calc(180deg + var(--demon-hue)), 100%, 50%) !important;
+}
+
+/*Icons and text*/
 .team-demon .icon,
 .team-demon .ability b,
 .character ul li .team-demon .icon,
@@ -67,20 +89,25 @@ ul.log li.message .card-role {
 .character.tab .role>.team-demon .icon,
 .character.tab .team-demon .name,
 .character.tab .team-demon .ability,
-ul.log li.message .card-role:has(.demon),
 .signals .roles li .team-demon,
 .signals .card-demon,
-/* .signals .card-role .demon, */
+.signals .card-role:has(.demon),
 .signals ul.roles .demon,
 .signals .players.circle li .team-demon,
 .town-info .box td.demon,
 #whispers .messages div b.team .team-demon,
 .reminder.team-demon>.icon {
-  filter: var(--enabled-filters) hue-rotate(220deg) saturate(1.6) !important;
+  filter: var(--enabled-filters) hue-rotate(var(--demon-hue)) saturate(1.6) !important;
 }
 
-
 /*minion*/
+
+/*Tokens*/
+ul.tokens>li.minion {
+  box-shadow: 0 0 10px hsl(calc(140deg + var(--minion-hue)), 100%, 50%) !important;
+}
+
+/*Icons and text*/
 .team-minion .icon,
 .team-minion .ability b,
 .character ul li .team-minion .icon,
@@ -99,20 +126,25 @@ ul.log li.message .card-role:has(.demon),
 .character.tab .role>.team-minion .icon,
 .character.tab .team-minion .name,
 .character.tab .team-minion .ability,
-ul.log li.message .card-role:has(.minion),
 .signals .roles li .team-minion,
 .signals .card-minion,
-.signals .card-role .minion,
+.signals .card-role:has(.minion),
 .signals ul.roles .minion,
 .signals .players.circle li .team-minion,
 .town-info .box td.minion,
 #whispers .messages div b.team .team-minion,
 .reminder.team-minion>.icon {
-  filter: var(--enabled-filters) hue-rotate(180deg) saturate(1.6) !important;
+  filter: var(--enabled-filters) hue-rotate(var(--minion-hue)) saturate(1.6) !important;
 }
 
-
 /*townsfolk*/
+
+/*Tokens*/
+ul.tokens>li.townsfolk {
+  box-shadow: 0 0 10px hsl(calc(40deg + var(--townsfolk-hue)), 100%, 50%) !important;
+}
+
+/*Icons and text*/
 .team-townsfolk .icon,
 .team-townsfolk .ability b,
 .character ul li .team-townsfolk .icon,
@@ -131,20 +163,26 @@ ul.log li.message .card-role:has(.minion),
 .character.tab .role>.team-townsfolk .icon,
 .character.tab .team-townsfolk .name,
 .character.tab .team-townsfolk .ability,
-ul.log li.message .card-role:has(.townsfolk),
 .signals .roles li .team-townsfolk,
 .signals .card-townsfolk,
-.signals .card-role .townsfolk,
+.signals .card-role:has(.townsfolk),
 .signals ul.roles .townsfolk,
 .signals .players.circle li .team-townsfolk,
 .town-info .box td.townsfolk,
 #whispers .messages div b.team .team-townsfolk,
 .reminder.team-townsfolk>.icon {
-  filter: var(--enabled-filters) hue-rotate(180deg) !important;
+  filter: var(--enabled-filters) hue-rotate(var(--townsfolk-hue)) saturate(1.6) !important;
 }
 
 
 /*outsider*/
+
+/*Tokens*/
+ul.tokens>li.outsider {
+  box-shadow: 0 0 10px hsl(calc(40deg + var(--outsider-hue)), 100%, 50%) !important;
+}
+
+/*Icons and text*/
 .team-outsider .icon,
 .team-outsider .ability b,
 .character ul li .team-outsider .icon,
@@ -163,20 +201,25 @@ ul.log li.message .card-role:has(.townsfolk),
 .character.tab .role>.team-outsider .icon,
 .character.tab .team-outsider .name,
 .character.tab .team-outsider .ability,
-ul.log li.message .card-role:has(.outsider),
 .signals .roles li .team-outsider,
 .signals .card-outsider,
-.signals .card-role .outsider,
+.signals .card-role:has(.outsider),
 .signals ul.roles .outsider,
 .signals .players.circle li .team-outsider,
 .town-info .box td.outsider,
 #whispers .messages div b.team .team-outsider,
 .reminder.team-outsider>.icon {
-  filter: var(--enabled-filters) hue-rotate(220deg) !important;
+  filter: var(--enabled-filters) hue-rotate(var(--outsider-hue)) saturate(1.6) !important;
 }
 
 /*traveller*/
 
+/*Tokens*/
+ul.tokens>li.traveller {
+  box-shadow: 0 0 10px hsl(calc(180deg + var(--traveller-hue)), 100%, 50%) !important;
+}
+
+/*Icons and text*/
 .team-traveller .icon,
 .team-traveller .ability b,
 .character ul li .team-traveller .icon,
@@ -190,21 +233,30 @@ ul.log li.message .card-role:has(.outsider),
 /* .night-reference ul li.traveller .name, */
 .night-order.tab .team-traveller .icon,
 .night-order.tab .team-traveller .name,
+.night-order.tab .team-traveller .reminder,
 .character.tab li>.team-traveller .icon,
 .character.tab .role>.team-traveller .icon,
 .character.tab .team-traveller .name,
 .character.tab .team-traveller .ability,
 .signals .roles li .team-traveller,
 .signals .card-traveller,
-.signals .card-role .traveller,
+.signals .card-role:has(.traveller),
 .signals ul.roles .traveller,
 .signals .players.circle li .team-traveller,
 .town-info .box td.traveller,
 #whispers .messages div b.team .team-traveller,
 .reminder.team-traveller>.icon {
-  filter: var(--enabled-filters) hue-rotate(170deg) !important;
+  filter: var(--enabled-filters) hue-rotate(var(--traveller-hue)) saturate(1.6) !important;
 }
 
+/*fabled*/
+
+/*Tokens*/
+ul.tokens>li.fabled {
+  box-shadow: 0 0 10px hsl(calc(180deg + var(--fabled-hue)), 100%, 50%) !important;
+}
+
+/*Icons and text*/
 .team-fabled .icon,
 .team-fabled .ability b,
 .character ul li .team-fabled .icon,
@@ -218,19 +270,57 @@ ul.log li.message .card-role:has(.outsider),
 /* .night-reference ul li.fabled .name, */
 .night-order.tab .team-fabled .icon,
 .night-order.tab .team-fabled .name,
+.night-order.tab .team-fabled .reminder,
 .character.tab li>.team-fabled .icon,
 .character.tab .role>.team-fabled .icon,
 .character.tab .team-fabled .name,
 .character.tab .team-fabled .ability,
 .signals .roles li .team-fabled,
 .signals .card-fabled,
-.signals .card-role .fabled,
+.signals .card-role:has(.fabled),
 .signals ul.roles .fabled,
 .signals .players.circle li .team-fabled,
 .town-info .box td.fabled,
 #whispers .messages div b.team .team-fabled,
 .reminder.team-fabled>.icon {
-  filter: var(--enabled-filters) hue-rotate(50deg) !important;
+  filter: var(--enabled-filters) hue-rotate(var(--fabled-hue)) saturate(1.6) !important;
+}
+
+/*loric*/
+
+/*Tokens*/
+ul.tokens>li.loric {
+  box-shadow: 0 0 10px hsl(calc(180deg + var(--loric-hue)), 100%, 50%) !important;
+}
+
+/*Icons and text*/
+.team-loric .icon,
+.team-loric .ability b,
+.character ul li .team-loric .icon,
+/*Word path below token
+.character ul li .team-loric .name, */
+.character .loric ul .team-loric .icon,
+.characters .loric ul li.loric .icon,
+.characters .loric ul li.loric .name,
+.characters .loric aside,
+.night-reference ul li.loric .icon,
+/* .night-reference ul li.loric .name, */
+.night-order.tab .team-loric .icon,
+.night-order.tab .team-loric .name,
+.night-order.tab .team-loric .reminder,
+.character.tab li>.team-loric .icon,
+.character.tab .role>.team-loric .icon,
+.character.tab .team-loric .name,
+.character.tab .team-loric .ability,
+.signals .roles li .team-loric,
+.signals .card-loric,
+.signals .card-role:has(.loric),
+.signals ul.roles .loric,
+.signals .players.circle li .team-loric,
+.town-info .box td.loric,
+#whispers .messages div b.team .team-loric,
+.reminder.team-loric>.icon {
+  filter: var(--enabled-filters) hue-rotate(var(--loric-hue)) saturate(1.6) !important;
 }
 
 .good {
@@ -249,32 +339,25 @@ ul.log li.message .card-role:has(.outsider),
 .character.tab .container,
 .night-order.tab .container {
   background-image: linear-gradient(180deg, rgb(12, 18, 36), rgb(29, 18, 30)) !important;
-  border:8px solid black;
 }
 
 /*Change the script buttons*/
 .character.tab .label,
 .night-order.tab .label {
-  background-image: linear-gradient(rgb(12, 18, 36), rgb(29, 18, 30), rgb(12, 18, 36)) !important;
+  background-image: linear-gradient(rgb(12, 18, 36) 5%, rgb(29, 18, 30), rgb(12, 18, 36) 95%) !important;
   color: #d0ae88;
 }
 
 /*Text chat style*/
 #whispers {
   background-image: repeating-linear-gradient(196deg,
-      rgba(40, 40, 50, 0.5),
-      rgba(40, 40, 50, 0.5),
-      rgba(10, 10, 30, 0.6),
-      rgba(10, 10, 30, 0.6),
-      rgba(50, 50, 50, 0.2),
       rgba(10, 10, 10, 0.5),
-      rgba(10, 10, 10, 0.5),
-      rgba(10, 10, 10, 0.5),
-      rgba(10, 10, 20, 0.5)) !important;
-  /* multiply 100% by color amount in gradient */
-  background-size: 600% 600% !important;
+      rgba(20, 20, 20, 0.5),
+      rgba(20, 20, 20, 0.5),
+      rgba(10, 10, 10, 0.5)) !important;
+  background-size: 900% 900% !important;
   border: 2px solid black !important;
-  animation: background_flow 40s ease-in-out infinite !important;
+  animation: background_flow 5s ease-in-out infinite !important;
 }
 
 /*Text chat notifications*/
@@ -282,6 +365,25 @@ ul.log li.message .card-role:has(.outsider),
   animation: alert 1s ease-in-out infinite;
   color: transparent !important;
   text-shadow: none !important;
+  background-image: repeating-linear-gradient(196deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 131, 199, 0.5),
+      rgba(176, 106, 179, 0.5),
+      rgba(255, 89, 89, 0.5)) !important;
+  background-size: 900% 900% !important;
+  animation: background_flow 1.5s ease-in-out infinite !important;
+}
+
+/*Voice chat style*/
+#channels {
+  background-image: repeating-linear-gradient(196deg,
+      rgba(10, 10, 10, 0.5),
+      rgba(20, 20, 20, 0.5),
+      rgba(20, 20, 20, 0.5),
+      rgba(10, 10, 10, 0.5)) !important;
+  background-size: 900% 900% !important;
+  border: 2px solid black !important;
+  animation: background_flow 5s ease-in-out infinite !important;
 }
 
 /*Necessary for other voting stylings*/
@@ -294,9 +396,25 @@ ul.log li.message .card-role:has(.outsider),
 #vote .overlay {
   position: absolute;
   top: 5%;
-  right: 22vw;
-  outline: 1px dashed white;
-  border: 3px solid gainsboro;
+  right: 20vw;
+  background-image: linear-gradient(180deg, rgb(12, 18, 36), rgb(29, 18, 30)) !important;
+  border-radius: 10px !important;
+}
+
+/*Border effect for the voting overlay*/
+#vote .overlay::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  translate: -50% -50%;
+  background-image: conic-gradient(from var(--angle), white 10%, black, white 90%);
+  z-index: -1;
+  border: 4px solid transparent;
+  border-radius: 10px;
+  animation: 5s rotate linear infinite;
 }
 
 /*Change the look of the clock hands*/
@@ -325,6 +443,7 @@ ul.log li.message .card-role:has(.outsider),
 .you .token {
   animation: glow 5s ease-in-out infinite !important;
 }
+
 
 /*Change ability text look*/
 .token .ability {
@@ -408,5 +527,15 @@ ul.log li.message .card-role:has(.outsider),
   100% {
     box-shadow: 0 0 20px 16px transparent;
     border-color: rgba(0, 0, 255, 1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: 360deg;
   }
 }
